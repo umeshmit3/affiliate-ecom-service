@@ -1,38 +1,23 @@
 
 package com.ecom.affiliate.model;
 
+import java.util.List;
+
 import com.ecom.affiliate.transformer.CustomCategoryDeserializer;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 @JsonDeserialize(using = CustomCategoryDeserializer.class)
 public class ProductCategoryResponse {
 
-    private String title;
-    private String description;
-    private ApiGroups apiGroups;
+    private List<ProductCategory> productCategories;
 
-    public String getTitle() {
-        return title;
-    }
+	public List<ProductCategory> getProductCategories() {
+		return productCategories;
+	}
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+	public void setProductCategories(List<ProductCategory> productCategories) {
+		this.productCategories = productCategories;
+	}
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public ApiGroups getApiGroups() {
-        return apiGroups;
-    }
-
-    public void setApiGroups(ApiGroups apiGroups) {
-        this.apiGroups = apiGroups;
-    }
 
 }
