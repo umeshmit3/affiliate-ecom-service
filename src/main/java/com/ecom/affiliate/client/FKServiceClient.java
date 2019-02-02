@@ -5,23 +5,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.net.URL;
-import java.util.Arrays;
 
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
-import org.springframework.web.client.RestClientException;
-import org.springframework.web.client.RestTemplate;
 
 import com.ecom.affiliate.exception.FeedServiceException;
 
@@ -35,7 +21,7 @@ public class FKServiceClient {
 		HttpURLConnection conn = null;
 		StringBuffer sb = null;
 		try {
-/*			url = new URL(requestUrl);
+			url = new URL(requestUrl);
 
 			conn = (HttpURLConnection) url.openConnection();
 			conn.setRequestMethod("GET");
@@ -46,8 +32,8 @@ public class FKServiceClient {
 			if (conn.getResponseCode() != 200) {
 				throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
 			}
-			BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream())));*/
-			BufferedReader br = new BufferedReader(new FileReader("D:\\Dev\\Spring_boot\\affiliate\\src\\main\\resources\\response.json"));
+			BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
+//			BufferedReader br = new BufferedReader(new FileReader("D:\\Dev\\Spring_boot\\affiliate\\src\\main\\resources\\response.json"));
 
 			String output;
 			sb = new StringBuffer();

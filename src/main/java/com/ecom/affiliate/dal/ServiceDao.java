@@ -11,7 +11,7 @@ public interface ServiceDao {
 	
 	public ProductCategoryResponse getAllCategories() throws FeedServiceException;
 
-	public ProductListResponse getProductsFromCategory(String category);
+	public ProductListResponse getProductsFromCategory(String category) throws FeedServiceException;
 
 	public List<ProductInfo> findProducts(String category, String productKey);
 }

@@ -2,6 +2,7 @@
 package com.ecom.affiliate.model;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
@@ -12,23 +13,36 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "v1.1.0"
+    "key",
+    "values"
 })
-public class AvailableVariants {
+public class SpecificationList {
 
-    @JsonProperty("v1.1.0")
-    private V110 v110;
+    @JsonProperty("key")
+    private String key;
+    @JsonProperty("values")
+    private List<Value> values = null;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    @JsonProperty("v1.1.0")
-    public V110 getV110() {
-        return v110;
+    @JsonProperty("key")
+    public String getKey() {
+        return key;
     }
 
-    @JsonProperty("v1.1.0")
-    public void setV110(V110 v110) {
-        this.v110 = v110;
+    @JsonProperty("key")
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    @JsonProperty("values")
+    public List<Value> getValues() {
+        return values;
+    }
+
+    @JsonProperty("values")
+    public void setValues(List<Value> values) {
+        this.values = values;
     }
 
     @JsonAnyGetter

@@ -7,6 +7,7 @@ import java.util.List;
 
 import com.ecom.affiliate.model.ProductCategory;
 import com.ecom.affiliate.model.ProductCategoryResponse;
+import com.ecom.affiliate.model.ProductListResponse;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.JsonToken;
@@ -20,10 +21,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  * @author Umesh
  *
  */
-public class CustomCategoryDeserializer extends JsonDeserializer<ProductCategoryResponse> {
+public class CustomProductListDeserializer extends JsonDeserializer<ProductListResponse> {
 
 	@Override
-	public ProductCategoryResponse deserialize(JsonParser parser, DeserializationContext ctxt)
+	public ProductListResponse deserialize(JsonParser parser, DeserializationContext ctxt)
 			throws IOException, JsonProcessingException {
 		ProductCategoryResponse response = new ProductCategoryResponse();
 		List<ProductCategory> categories = new ArrayList<>();
@@ -67,7 +68,7 @@ public class CustomCategoryDeserializer extends JsonDeserializer<ProductCategory
 		/*for (ProductCategory p : categories) {
 			System.out.println(p.getApiName());
 		}*/
-		return response;
+		return null;
 	}
 
 }

@@ -12,23 +12,49 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "v1.1.0"
+    "sleeve",
+    "neck",
+    "idealFor"
 })
-public class AvailableVariants {
+public class LifeStyleInfo {
 
-    @JsonProperty("v1.1.0")
-    private V110 v110;
+    @JsonProperty("sleeve")
+    private Object sleeve;
+    @JsonProperty("neck")
+    private Object neck;
+    @JsonProperty("idealFor")
+    private Object idealFor;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    @JsonProperty("v1.1.0")
-    public V110 getV110() {
-        return v110;
+    @JsonProperty("sleeve")
+    public Object getSleeve() {
+        return sleeve;
     }
 
-    @JsonProperty("v1.1.0")
-    public void setV110(V110 v110) {
-        this.v110 = v110;
+    @JsonProperty("sleeve")
+    public void setSleeve(Object sleeve) {
+        this.sleeve = sleeve;
+    }
+
+    @JsonProperty("neck")
+    public Object getNeck() {
+        return neck;
+    }
+
+    @JsonProperty("neck")
+    public void setNeck(Object neck) {
+        this.neck = neck;
+    }
+
+    @JsonProperty("idealFor")
+    public Object getIdealFor() {
+        return idealFor;
+    }
+
+    @JsonProperty("idealFor")
+    public void setIdealFor(Object idealFor) {
+        this.idealFor = idealFor;
     }
 
     @JsonAnyGetter

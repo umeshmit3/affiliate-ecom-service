@@ -12,23 +12,36 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "v1.1.0"
+    "amount",
+    "currency"
 })
-public class AvailableVariants {
+public class FlipkartSpecialPrice {
 
-    @JsonProperty("v1.1.0")
-    private V110 v110;
+    @JsonProperty("amount")
+    private Integer amount;
+    @JsonProperty("currency")
+    private String currency;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    @JsonProperty("v1.1.0")
-    public V110 getV110() {
-        return v110;
+    @JsonProperty("amount")
+    public Integer getAmount() {
+        return amount;
     }
 
-    @JsonProperty("v1.1.0")
-    public void setV110(V110 v110) {
-        this.v110 = v110;
+    @JsonProperty("amount")
+    public void setAmount(Integer amount) {
+        this.amount = amount;
+    }
+
+    @JsonProperty("currency")
+    public String getCurrency() {
+        return currency;
+    }
+
+    @JsonProperty("currency")
+    public void setCurrency(String currency) {
+        this.currency = currency;
     }
 
     @JsonAnyGetter

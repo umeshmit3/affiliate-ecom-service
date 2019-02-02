@@ -16,7 +16,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "productShippingInfoV1",
     "categorySpecificInfoV1"
 })
-public class ProductInfo {
+public class Product {
 
     @JsonProperty("productBaseInfoV1")
     private ProductBaseInfoV1 productBaseInfoV1;
